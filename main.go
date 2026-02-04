@@ -82,27 +82,3 @@ func main() {
 	}
 
 }
-
-func algoritm() {
-	var s string
-	fmt.Scan(&s)
-
-	ans := ' '
-	anscnt := 0
-
-	for i := 0; i < len(s); i++ {
-		nowcnt := 0
-
-		for j := 0; j < len(s); j++ {
-			if s[i] == s[j] {
-				nowcnt++
-			}
-		}
-		if i == 0 || nowcnt < anscnt {
-			ans = rune(s[i])
-			anscnt = nowcnt
-		}
-	}
-	fmt.Printf("%c", ans)
-
-}
